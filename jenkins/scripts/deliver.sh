@@ -18,5 +18,4 @@ CMD=`scp -P 22000 Jenkinsfile webdev@1.242.216.122:~/projects/lotte/${NAME}-${VE
 set +x
 bash -c 'id'
 bash -c 'ls -al'
-bash -c 'which scp'
-bash -c '${CMD}'
+bash -c 'export CMD=${CMD}'
