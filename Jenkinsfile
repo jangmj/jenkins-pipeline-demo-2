@@ -26,6 +26,7 @@ pipeline {
                 sh 'echo "scp Jenkinsfile"'
                 sh '''
                 	id
+                	pwd
                     echo "${CMD}"
                     ls -lah
                     scp -P 22000 ./Jenkinsfile webdev@1.242.216.122:~/projects/lotte/
