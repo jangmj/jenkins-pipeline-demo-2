@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Hello World"'
-                sh 'mvn -B'
+                sh 'mvn --version'
                 sh '''
                     echo "Multiline shell steps works too"
                     id
