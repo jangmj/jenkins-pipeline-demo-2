@@ -19,5 +19,5 @@ set +x
 bash -c 'id'
 bash -c 'ls -al'
 #bash -c 'export CMD=${CMD}'
-bash -c 'ls -al /root/.m2/'
-bash -c 'echo "hello" > /root/.m2/hello.txt'
+#bash -c 'ls -al /root/.m2/'
+bash -c 'echo "hello" > hello.txt'
