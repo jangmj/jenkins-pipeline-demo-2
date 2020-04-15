@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3-alpine'
-            args '--name my-maven-project -v /root/.m2:/root/.m2'
+            args '-v /root/.m2:/root/.m2 -u 1000'
         }
     }
     options {
@@ -30,7 +30,7 @@ pipeline {
                 	pwd
                     echo "${CMD}"
                     ls -lah
-                    docker container exec my-maven-project ls
+                    #docker container exec my-maven-project ls
                     #which scp
                     #scp -P 22000 ./Jenkinsfile webdev@1.242.216.122:~/projects/lotte/
                 '''
