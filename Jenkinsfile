@@ -30,7 +30,8 @@ pipeline {
                 	pwd
                     echo "${CMD}"
                     ls -lah
-                    which scp
+                    docker container exec my-maven-project ls
+                    #which scp
                     #scp -P 22000 ./Jenkinsfile webdev@1.242.216.122:~/projects/lotte/
                 '''
             }
