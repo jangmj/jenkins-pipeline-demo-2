@@ -17,6 +17,7 @@ set -x
 CMD=`scp -P 22000 Jenkinsfile webdev@1.242.216.122:~/projects/lotte/${NAME}-${VERSION}.war`
 set +x
 bash -c 'id'
+bash -c 'pwd'
 bash -c 'ls -al'
 #bash -c 'export CMD=${CMD}'
 bash -c 'ls -al ~/'
