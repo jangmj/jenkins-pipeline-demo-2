@@ -8,7 +8,7 @@ pipeline {
 		     agent {
 		        docker {
 		            image 'maven:3-alpine'
-		            args '-v /var/jenkins_home/.m2:/root/.m2 -u 1000'
+		            args '-v /var/jenkins_home/.m2:/jenkins/.m2 -u 1000'
 		        }
 		    }
             steps {
@@ -34,7 +34,7 @@ pipeline {
                     ls -lah
                     #docker container exec my-maven-project ls
                     which scp
-                    scp -P 22000 /var/jenkins_home/workspace/jenkins-pipeline-demo-2_master/hello.txt webdev@1.242.216.122:~/projects/lotte/
+                    scp -P 22000 /var/jenkins_home/.m2/hello.txt webdev@1.242.216.122:~/projects/lotte/
                 '''
             }
         }
