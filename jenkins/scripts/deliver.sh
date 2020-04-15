@@ -18,5 +18,6 @@ CMD=`scp -P 22000 Jenkinsfile webdev@1.242.216.122:~/projects/lotte/${NAME}-${VE
 set +x
 bash -c 'id'
 bash -c 'ls -al'
-bash -c 'export CMD=${CMD}'
+#bash -c 'export CMD=${CMD}'
+bash -c 'ls -al /root/.m2/'
 bash -c 'echo "hello" > /root/.m2/hello.txt'
