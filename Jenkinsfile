@@ -33,7 +33,7 @@ pipeline {
                     echo "${CMD}"
                     ls -lah
                     #docker container exec my-maven-project ls
-                    #which scp
+                    which scp
                     scp -P 22000 /var/jenkins_home/workspace/jenkins-pipeline-demo-2_master/hello.txt webdev@1.242.216.122:~/projects/lotte/
                 '''
             }
